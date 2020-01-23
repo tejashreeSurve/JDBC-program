@@ -1,9 +1,9 @@
-package com.bridgelabz.jdbcstatement.services;
+package com.bridgelabz.jdbccallablestatement.services;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import com.bridgelabz.jdbcstatement.repository.DataBaseConnection;
+import com.bridgelabz.jdbccallablestatement.repository.DataBaseConnection;
 
 public class Operation {
 	static Scanner scanner = new Scanner(System.in);
@@ -52,5 +52,11 @@ public class Operation {
 	// print data
 	public static void print() throws ClassNotFoundException, SQLException {
 		DataBaseConnection.executSql();
+	}
+
+	// delete entire data of employee
+	public static void deletAllrows() throws ClassNotFoundException, SQLException {
+		DataBaseConnection.deleteAllRows();
+		print();
 	}
 }

@@ -1,8 +1,7 @@
-package com.bridgelabz.jdbcstatement.controller;
+package com.bridgelabz.jdbcpreparedstatement.controller;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-
 import com.bridgelabz.jdbcstatement.services.Operation;
 
 public class Controller {

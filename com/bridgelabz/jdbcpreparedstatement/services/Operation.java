@@ -1,9 +1,9 @@
-package com.bridgelabz.jdbcstatement.services;
+package com.bridgelabz.jdbcpreparedstatement.services;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import com.bridgelabz.jdbcstatement.repository.DataBaseConnection;
+import com.bridgelabz.jdbcpreparedstatement.repository.DataBaseConnection;
 
 public class Operation {
 	static Scanner scanner = new Scanner(System.in);

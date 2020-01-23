@@ -8,7 +8,6 @@ public class Employee {
 	String emailId;
 
 	public Employee(int eid, String ename, String department, String phoneNumber, String emailId) {
-
 		this.eid = eid;
 		this.ename = ename;
 		this.department = department;
@@ -55,5 +54,4 @@ public class Employee {
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-
 }

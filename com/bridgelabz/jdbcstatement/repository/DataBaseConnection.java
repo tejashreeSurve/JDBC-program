@@ -31,11 +31,12 @@ public class DataBaseConnection {
 		statement.close();
 		connection.close();
 	}
-	
+
 	// insert query
 	public static void insertData(int id, String name, String Dep, String phoneNO, String email)
 			throws ClassNotFoundException, SQLException {
-		String query = "insert into employees values("+id+",'"+name+"','"+Dep+"','"+phoneNO+"','"+email+"')";
+		String query = "insert into employees values(" + id + ",'" + name + "','" + Dep + "','" + phoneNO + "','"
+				+ email + "')";
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection connection = DriverManager.getConnection(url, username, password);
 		Statement statement = connection.createStatement();
@@ -44,23 +45,24 @@ public class DataBaseConnection {
 		statement.close();
 		connection.close();
 	}
-	
+
 	// update query
 	public static void UpdateData(int id, String name, String Dep, String phoneNO, String email)
 			throws ClassNotFoundException, SQLException {
-		String query = "update employees set ename='"+name+"',department='"+Dep+"',phoneNumber='"+phoneNO+"',email='"+email+"' where eid="+id;
+		String query = "update employees set ename='" + name + "',department='" + Dep + "',phoneNumber='" + phoneNO
+				+ "',email='" + email + "' where eid=" + id;
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection connection = DriverManager.getConnection(url, username, password);
 		Statement statement = connection.createStatement();
 		int count = statement.executeUpdate(query);
-		System.out.println(count+1 + " record is added successfully");
+		System.out.println(count + 1 + " record is added successfully");
 		statement.close();
 		connection.close();
 	}
 
 	// delete query
 	public static void deletData(int id) throws ClassNotFoundException, SQLException {
-		String query = "delete from employees where eid="+id;
+		String query = "delete from employees where eid=" + id;
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection connection = DriverManager.getConnection(url, username, password);
 		Statement statement = connection.createStatement();
